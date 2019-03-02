@@ -1,0 +1,13 @@
+1.保存和加载整个模型:
+torch.save(model_object,'name.pkl')
+  保存和加载整个模型参数：
+torch.save(model_object.state_dict(),'name.pkl')
+model_object.load_state_dict(torch.load('name.pkl'))
+
+model=torch.load('name.pkl')
+
+2.cpu加载GPU训练模型:
+torch.load('pt',map_location=lambda storage,loc:storage)
+
+3.多GPU训练下的模型:
+error：keyError,unexpected key !blog
